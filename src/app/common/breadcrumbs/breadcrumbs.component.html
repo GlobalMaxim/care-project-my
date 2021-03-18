@@ -1,0 +1,7 @@
+<ol *ngIf="getIsBreadCrumbsDefined()" itemscope itemtype="http://schema.org/BreadcrumbList">
+  <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" *ngFor="let breadcrumb of breadcrumbs; index as i">
+    <a itemprop="item" [href]="breadcrumb.url" [class]="i === breadcrumbs.length - 1 ? 'active' : ''">
+    <span itemprop="name">{{ breadcrumb.label | translate }}</span></a>
+    <meta itemprop="position" [content]="i + 1" />
+  </li>
+</ol>

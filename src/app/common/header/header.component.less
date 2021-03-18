@@ -1,0 +1,127 @@
+@import 'src/assets/less/base.less';
+.header {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    .h-top {
+        padding: 15px 0;
+        background: #fff;
+
+        * {
+            font-size: 24px;
+        }
+
+        .menu {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & > .link {
+                &:not(:last-of-type) {
+                    margin-right: 15px;
+                }
+            }
+
+            a {
+                &.active {
+                    font-weight: 700;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    color: @brown-l;
+                }
+            }
+        }
+
+        .languages {
+            text-transform: uppercase;
+
+            .dropdown-menu {
+                width: 100%;
+                min-width: 0;
+                border-radius: 0;
+                padding: 0;
+                text-align: center;
+
+                .link {
+                    a {
+                        padding: 5px;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        @media(min-width: 1200px) and (max-width: 1600px) {
+            * {
+                font-size: 21px;
+            }
+
+            .logo {
+                img {
+                    width: 280px;
+                }
+            }
+
+            .menu {
+                & > .link {
+                    &:not(:last-of-type) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .h-bottom {
+        background: @brown-m;
+        padding: 30px 0;
+        color: #fff;
+
+        a {
+            color: #fff;
+        }
+
+        .categories {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 700;
+
+            .link {
+                &:not(:last-of-type) {
+                    margin-right: 15px;
+                }
+
+                a {
+                    line-height: 1;
+                    display: block;
+
+                    &:hover,
+                    &.active {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        @media(min-width: 1200px) and (max-width: 1600px) {
+            padding: 20px 0;
+
+            .categories {
+                font-size: 23px;
+            }
+        }
+    }
+}

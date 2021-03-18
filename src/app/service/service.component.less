@@ -1,0 +1,79 @@
+@import '../../../src/assets/less/base.less';
+@import '../../../src/assets/less/fontsizes.less';
+
+.single-main {
+    padding: 45px 0 0 0;
+
+    .title {
+        margin: 0 0 65px 0;
+
+        @media(max-width: 767px) {
+            margin: 0 0 40px 0;
+        }
+    }
+}
+
+.compare-block {
+    padding: 90px 0 0 0;
+
+    .carousel {
+        .for-spinner {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @media(max-width: 767px) {
+        padding: 40px 0 0 0;
+    }
+}
+
+.section-products {
+    padding: 90px 0 95px 0;
+
+    .product {
+        margin: 55px auto 0;
+    }
+
+    .cl-btn {
+        min-width: 270px;
+    }
+
+    @media(min-width: 768px) and (max-width: 1199px) {
+        padding: 70px 0;
+    }
+
+    @media(max-width: 767px) {
+        padding: 45px 0;
+
+        .product {
+            margin: 30px auto 0;
+        }
+    }
+
+    &.front-products {
+        @media(min-width: 576px) {
+            .slider {
+                padding: 0;
+                .arrows {
+                    display: none;
+                }
+            }
+            .carousel-inner {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -10px;
+                .prod-outer {
+
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}

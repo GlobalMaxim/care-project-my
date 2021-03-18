@@ -1,0 +1,7 @@
+Sitemap: https://www.domain.com/sitemap.xml
+
+User-agent: Googlebot
+Disallow: /blog/
+Allow: /blog/post-title/
+User-agent: Bingbot
+Disallow: /services/

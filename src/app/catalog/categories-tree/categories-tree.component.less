@@ -1,0 +1,43 @@
+@import "../../../../src/assets/less/base.less";
+@import "../../../../src/assets/less/fontsizes.less";
+
+.category-menu {
+    border-right: 1px solid @brown;
+    height: 100%;
+    padding: 0 15px 0 0;
+
+    & > div {
+        margin-bottom: 30px;
+
+        & > a {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .dropdown-menu {
+            padding: 20px 0 0 0;
+            position: relative !important;
+            left: initial !important;
+            top: initial !important;
+            right: initial !important;
+            bottom: initial !important;
+            transform: none !important;
+
+            .link {
+                &:not(:last-of-type) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    @media(min-width: 1200px) and (max-width: 1600px) {
+        & > div {
+            margin-bottom: 20px;
+
+            & > a {
+                font-size: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+          "type": "pwa-node",
+          "request": "launch",
+          "name": "ts-server",
+          "args": ["${workspaceFolder}\\server.ts"],
+          "resolveSourceMapLocations": [
+            "${workspaceFolder}/**",
+            "!**/node_modules/**"
+          ],
+          "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+          "env": {
+            "TS_NODE_PROJECT": "tsconfig.server.json"
+          },
+          "sourceMaps": true,
+          "cwd": "${workspaceRoot}",
+          "stopOnEntry": true
+        }
+      ]
+}

@@ -1,0 +1,41 @@
+@import 'src/assets/less/base.less';
+.cart-inner {
+    padding: 65px 0 50px 0;
+
+    @media(max-width: 991px) {
+        padding: 35px 0 50px 0;
+
+        .for-cart {
+            overflow-x: scroll;
+        }
+    }
+
+    .cart-block {
+        .cart-row {
+            border-bottom: 1px solid @brown;
+            padding: 15px 0;
+
+            .pic {
+                img {
+                    width: 100px;
+                }
+            }
+
+            .trash {
+                width: 23px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        @media(max-width: 991px) {
+
+            .for-trash {
+                order: -1;
+            }
+        }
+    }
+
+}

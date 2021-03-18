@@ -1,0 +1,68 @@
+@import "../../../../../src/assets/less/base.less";
+
+.dt-block {
+  &:not(:last-of-type) {
+    margin-bottom: 45px;
+  }
+
+  @media (max-width: 767px) {
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.tit {
+  font-size: 30px;
+  color: @brown-l;
+  padding-bottom: 20px;
+  margin: 0 0 25px 0;
+  border-bottom: 1px solid @brown;
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+    padding-bottom: 15px;
+    margin: 0px 0 20px 0;
+  }
+}
+
+.inputblock {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  p {
+    flex-shrink: 0;
+    margin: 0 35px 0 0;
+    font-size: 24px;
+
+    .req {
+      color: #ff0000;
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1600px) {
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin: 0 20px 0 0;
+      font-size: 16px;
+    }
+  }
+}

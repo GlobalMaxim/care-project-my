@@ -1,0 +1,389 @@
+@import 'src/assets/less/base.less';
+// @import 'src/assets/less/fontsizes.less';
+.product-inner {
+    padding: 40px 0 120px 0;
+
+    @media(min-width: 768px) and (max-width: 1199px) {
+        padding: 40px 0 70px 0;
+    }
+
+    @media(max-width: 767px) {
+        padding: 40px 0 40px 0;
+    }
+
+    .product-inner-top {
+        .slider {
+            text-align: center;
+
+            img {
+                max-width: 100%;
+            }
+
+            @media(max-width: 991px) {
+                .carousel-indicators {
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flex;
+                    display: -o-flex;
+                    display: flex;
+                    justify-content: center;
+                    margin: 0;
+                    position: relative;
+                    left: initial;
+                    right: initial;
+                    top: initial;
+                    bottom: initial;
+
+                    li {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        border: none;
+                        background: #fff;
+                        border: 1px solid @brown;
+
+                        &.active {
+                            background: @brown;
+                        }
+
+                        &:not(:last-of-type) {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+            @media(min-width: 992px) {
+                .carousel-indicators {
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flex;
+                    display: -o-flex;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    position: relative;
+                    left: initial;
+                    right: initial;
+                    top: initial;
+                    bottom: initial;
+                    margin: 0;
+
+                    li {
+                        border: none;
+                        text-indent: initial;
+                        border-radius: 0;
+                        background: none;
+                        cursor: pointer;
+                        width: 33.333%;
+                        margin: 10px 0 0 0;
+                        height: auto;
+                        opacity: 0.6;
+
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pit-right {
+            .title {
+                margin: 0 0 40px 0;
+            }
+
+            .text-block {
+                margin: 0 0 40px 0;
+            }
+
+            .price-row {
+                margin: 0 0 25px 0;
+                padding: 0 0 25px 0;
+                border-bottom: 2px solid #ccc;
+
+                .price {
+                    font-size: 44px;
+                }
+
+                .status {
+                    font-size: 24px;
+                    font-weight: 700;
+
+                    &.available {
+                        color: @green;
+                    }
+
+                    &.unavailable {
+                        color: red;
+                    }
+                }
+            }
+
+            .product-settings {
+                margin: 50px 0 0 0;
+
+                .pi-row {
+
+                    &:not(:last-of-type) {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+
+            .buttons-row {
+                margin: 65px 0 0 0;
+                font-size: 24px;
+
+                .to-report {
+                    color: @brown-l;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: @brown;
+                    }
+                }
+
+                @media(min-width: 1200px) and (max-width: 1600px) {
+                    font-size: 21px;
+                }
+
+                @media(max-width: 767px) {
+                    .pay {
+                        img {
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+
+            @media(max-width: 1199px) {
+                padding: 30px 0 0 0;
+
+                .title {
+                    margin: 0 0 20px 0;
+                }
+
+                .text-block {
+                    margin: 0 0 30px 0;
+                }
+
+                .price-row {
+                    margin: 30px 0 0 0;
+
+                    .price {
+                        font-size: 20px;
+                    }
+
+                    .status {
+                        font-size: 16px;
+                    }
+
+                    .txt {
+                        font-size: 14px;
+                    }
+                }
+
+                .product-settings {
+                    margin: 40px 0 0 0;
+
+                    .pi-row {
+
+                        &:not(:last-of-type) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+
+                .buttons-row {
+                    margin: 35px 0 0 0;
+                    font-size: 16px;
+                    text-align: center;
+
+                    .cl-btn {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-inner-bottom {
+        margin: 45px 0 0 0;
+
+        .for-controls {
+            margin-bottom: 35px;
+            padding-bottom: 35px;
+            border-bottom: 2px solid #ccc;
+
+            @media(min-width: 768px) {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+
+                .btn {
+                    font-size: 24px;
+                    padding: 15px 18px;
+                    border-radius: 5px;
+                    line-height: 1;
+                    box-shadow: none;
+
+                    &:not(.collapsed) {
+                        font-weight: 700;
+                        background: @brown-l;
+                        color: #fff;
+                        border: 2px solid @brown-m;
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            border: none;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        @media(min-width: 768px) and (max-width: 1199px) {
+            .for-controls {
+
+                .btn {
+                    font-size: 20px;
+                    padding: 10px 15px;
+                }
+            }
+        }
+
+        @media(max-width: 767px) {
+            margin: 35px 0 0 0;
+
+            .for-controls {
+                margin: 0;
+                padding: 0;
+                border: none;
+
+                .bc-block {
+                    margin: 0;
+
+                    &:not(:last-of-type) {
+                        margin-bottom: 10px;
+                    }
+
+                    .btn {
+                        padding: 0;
+                        position: relative;
+                        text-transform: uppercase;
+                        box-shadow: none;
+
+                        &:not(.collapsed) {
+                            text-decoration: underline;
+                            font-weight: 700;
+
+                            &:before {
+                                transform: translateY(-50%) rotate(-180deg);
+                            }
+                        }
+
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            right: -20px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 5px 5px 0 5px;
+                            border-color: #000000 transparent transparent transparent;
+                            transition: 0.3s;
+                        }
+                    }
+
+                    .card-body {
+                        padding: 20px 0 20px 0;
+
+                        .for-text {
+                            margin: 20px 0 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.order-modal {
+    .modal-dialog {
+        max-width: 1770px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .modal-content {
+            background-color: #ffffff;
+            border: 1px solid #989898;
+            box-shadow: 0px 0px 35px 22px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            padding: 70px 70px 35px 70px;
+
+            @media(max-width: 767px) {
+                padding: 25px 20px 30px 20px;
+                text-align: center;
+
+                .product-info-row {
+                    .pic {
+                        max-width: 220px;
+                        margin: auto;
+                        margin: 0 auto 20px;
+                    }
+                }
+            }
+
+            .modal-cart {
+                padding: 30px;
+                border: 3px solid @brown;
+                background-color: #f8f8f8;
+                border-radius: 5px;
+                box-shadow: 0px 0px 35px 22px rgba(0, 0, 0, 0.09);
+                max-width: 500px;
+                margin: auto;
+
+                @media(max-width: 767px) {
+                    padding: 25px;
+                }
+            }
+
+            .m-bottom {
+                .mb-title {
+                    border-bottom: 1px solid #ccc;
+                    padding: 0 0 15px 0;
+                }
+            }
+
+            .slider {
+                .pic {
+                    img {
+                        width: 105px;
+                    }
+                }
+            }
+
+            .product-info-block {
+
+
+                .btn {
+                    &:not(.collapsed) {
+                        display: none;
+                    }
+                }
+
+                @media(min-width: 1200px) and (max-width: 1800px) {
+                    select {
+                        max-width: 250px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
