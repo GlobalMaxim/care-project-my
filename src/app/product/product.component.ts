@@ -31,6 +31,7 @@ export class ProductComponent implements OnInit, AfterViewInit {
         const collapseContent = this.collapsecontent.nativeElement;
 
         if (window.innerWidth < 768) {
+            console.log('hi')
             $('.collapse-content').each(function () {
                 var block = $(this),
                     collapse = block.find('.collapse');

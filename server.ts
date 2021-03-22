@@ -22,11 +22,20 @@ var webpack = require("webpack");
 const template = fs
     .readFileSync(path.join(join(process.cwd(), 'dist/care-clinic-client-application/browser'), 'index.html'))
     .toString();
-
-// Shim for the global window and document objects.
 const window = domino.createWindow(template);
-window.navigator.language = 'en';
 global['window'] = window;
+Object.defineProperty(window.document.body.style, 'transform', {
+    value: () => {
+        return {
+            enumerable: true,
+            configurable: true
+        }
+    }
+})
+// Shim for the global window and document objects.
+
+window.navigator.language = 'en';
+
 global['document'] = window.document;
 
 // The Express app is exported so that it can be used by serverless Functions.
